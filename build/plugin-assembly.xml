@@ -22,8 +22,9 @@
            <unpack>false</unpack>
            <dependencySets>
                <dependencySet>
+                    <useTransitiveDependencies>false</useTransitiveDependencies>
                     <includes>
-                         <include>*</include>
+                        <include>*</include>
                     </includes>
                </dependencySet>
            </dependencySets>

@@ -36,6 +36,8 @@ public class TracIssueFetcher extends AbstractIssueFetcher {
     }
     
     public String getUrl(String host, String id) {
+        System.out.println(host);
+        System.out.println(id);
         return null;
     }
     private IssueData parseXml(InputStream body, String url) {

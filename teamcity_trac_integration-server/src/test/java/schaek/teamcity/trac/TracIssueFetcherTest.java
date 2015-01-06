@@ -18,13 +18,13 @@ public class TracIssueFetcherTest {
     private String id="TEST-1";
     private EhCacheUtil cacheUtil;
     
-    @BeforeClass
+    //@BeforeClass
     public void init(){
         ServerPaths serverPaths = new ServerPaths(System.getProperty("java.io.tmpdir"));
         EventDispatcher<BuildServerListener> dispatcher = EventDispatcher.create(BuildServerListener.class);
         cacheUtil = new EhCacheUtil(serverPaths, dispatcher, new ResetCacheRegisterImpl());
     }
-    @Test
+    //@Test
     public void testFetch() throws Exception{
         IssueFetcher tracIssueFetcher = new TracIssueFetcher(cacheUtil);
         
