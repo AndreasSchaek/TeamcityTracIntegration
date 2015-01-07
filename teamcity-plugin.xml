@@ -5,7 +5,7 @@
     <display-name>Teamcity Trac Integration</display-name>
     <version>@Version@</version>
     <description>This plugin can link VCS-comments to Trac Project issues</description>
-    <download-url>Plugin download URL</download-url>
+    <download-url>https://github.com/AndreasSchaek/TeamcityTracIntegration</download-url>
     <email>AndreasSchaek@hotmail.com</email>
     <vendor>
       <name>@VendorName@</name>

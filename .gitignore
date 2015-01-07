@@ -44,4 +44,4 @@ Temporary Items
 
 # Maven & Eclipse excludes
 */target
-*/test-output
+**/test-output

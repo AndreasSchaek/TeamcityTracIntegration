@@ -10,6 +10,10 @@
          <source>target/teamcity-plugin.xml</source>
          <outputDirectory>/</outputDirectory>
      </file> 
+     <file>
+         <source>editIssueProvider.jsp</source>
+         <outputDirectory>/admin</outputDirectory>
+     </file> 
   </files>
   <moduleSets>
     <moduleSet>
