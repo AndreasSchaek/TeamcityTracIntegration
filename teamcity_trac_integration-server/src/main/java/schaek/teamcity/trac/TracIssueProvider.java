@@ -1,5 +1,7 @@
 package schaek.teamcity.trac;
 
+import java.util.regex.Matcher;
+
 import jetbrains.buildServer.issueTracker.AbstractIssueProvider;
 import jetbrains.buildServer.issueTracker.IssueFetcher;
 
@@ -13,6 +15,12 @@ public class TracIssueProvider extends AbstractIssueProvider {
     // The prefix is configured via properties, regexp is invisible for users.
     @Override
     protected boolean useIdPrefix() {
-        return true;
+        return false;
+    }
+    @Override
+    protected String extractId(String match) {
+        Matcher matcher = myPattern.matcher(match);
+        matcher.find();
+        return matcher.group(1);
     }
 }
