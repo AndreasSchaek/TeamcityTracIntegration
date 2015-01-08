@@ -23,6 +23,7 @@
         <span id="error_host" class="error"></span>
       </td>
     </tr>
+    <!--
     <tr>
       <th><label for="username" class="shortLabel">Username:</label></th>
       <td>
@@ -37,6 +38,7 @@
         <span id="error_secure:password" class="error"></span>
       </td>
     </tr>
+    -->
     <tr>
       <th><label for="pattern" class="shortLabel">Issue ID Pattern: <l:star/></label></th>
       <td>
