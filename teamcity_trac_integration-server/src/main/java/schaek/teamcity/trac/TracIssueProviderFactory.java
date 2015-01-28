@@ -7,9 +7,15 @@ import jetbrains.buildServer.issueTracker.IssueProvider;
 import org.jetbrains.annotations.NotNull;
 
 public class TracIssueProviderFactory extends AbstractIssueProviderFactory {
+    
+    @SuppressWarnings("deprecation")
     public TracIssueProviderFactory(@NotNull IssueFetcher fetcher) {
-        // Type name usually starts with uppercase character because it is displayed in UI, but not necessarily.
-        super(fetcher, "trac","Trac");
+        super(fetcher, "trac");
+    }
+
+    @Override
+    public String getDisplayName() {
+        return "Trac";
     }
 
     @NotNull

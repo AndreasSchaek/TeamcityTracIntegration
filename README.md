@@ -1,9 +1,25 @@
 # Trac Plugin for Teamcity
 ## Introduction
-This project creates a [TeamCity](www.jetbrains.com/teamcity/) Plugin to communicate with [Trac](http://trac.edgewall.org/) issue tracker.
+This project creates a [TeamCity](www.jetbrains.com/teamcity/) Plugin to communicate with [Trac](http://trac.edgewall.org/) issue tracker.<BR>
+Tested on 8.1.4 and 9.0.1
 
 ## Quick-Use
-If you just need the zip to activate the plugin take this zip: * target/teamcity_trac_integration.zip`
+If you just need the zip to activate the plugin take this zip: *target/teamcity_trac_integration.zip* <BR>
+
+## Installation
+To install the plugin login with administrator account and select <BR>
+*Administration->Plugin List* <BR>
+and click <BR>
+*Upload plugin zip*.<BR>
+The server will tell you that the plugin gets uploaded to *<Teamcity Data Directory>\plugins*.
+After the plugin is uploaded you have to restart the server.<BR>
+(Check the [Documentation](https://confluence.jetbrains.com/display/TCD9/Installing+Additional+Plugins) for manually installing the plugin)
+
+## Configuration
+When you add a new issue tracker connection you have to select _trac_ as the connection type.<BR>
+The _server url_ must be the url of the trac project (for example _http://192.168.168.1:8000/EnvironmentTestProject_) <BR>
+The issue ID Pattern is a Regular expression (like this _TEST-(\d+)_)<BR>
+That would find a commit message _TEST-1_ and link it to _http://192.168.168.1:8000/EnvironmentTestProject/ticket/1_
 
 ## Building
 You'll need JDK and Maven installed and the corresponding environment settings (`JAVA_HOME=<JDK Location>` and `MAVEN_HOME="MAVEN Location`')
@@ -20,6 +36,8 @@ The plugin reads the html text for a specific issue with an InputStream and then
 ## Pitfalls
 1. It's important, that the name of the plugin in `teamcity-plugin.xml` equals the type used in `TracIssueProvider` and `TracIssueProviderFactory`.
 Otherwise Teamcity doesn't render an input form
+2. In Teamcity 8.x _AbstractIssueProviderFactory_ has a two parameter constructor (IssueFetcher fetcher, String type).<BR> 
+In Teamcity 9.x this constructor is deprecated and you should use the 3 parameter constructor (IssueFetcher fetcher, String type, String displayName)
 
 ## Donations welcome
 [PayPal](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=52MGDJ6KQ5S2Q&lc=DE&item_name=Andreas%20Schaek&no_note=0&cn=Message%20to%20the%20developer%3a&no_shipping=1&currency_code=EUR&bn=PP%2dDonationsBF%3abtn_donate_SM%2egif%3aNonHosted)
