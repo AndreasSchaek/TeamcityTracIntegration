@@ -38,6 +38,3 @@ The plugin reads the html text for a specific issue with an InputStream and then
 Otherwise Teamcity doesn't render an input form
 2. In Teamcity 8.x _AbstractIssueProviderFactory_ has a two parameter constructor (IssueFetcher fetcher, String type).<BR> 
 In Teamcity 9.x this constructor is deprecated and you should use the 3 parameter constructor (IssueFetcher fetcher, String type, String displayName)
-
-## Donations welcome
-[PayPal](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=52MGDJ6KQ5S2Q&lc=DE&item_name=Andreas%20Schaek&no_note=0&cn=Message%20to%20the%20developer%3a&no_shipping=1&currency_code=EUR&bn=PP%2dDonationsBF%3abtn_donate_SM%2egif%3aNonHosted)
